@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalService } from '../../services/service.index';
 
 @Component({
   selector: 'app-login',
@@ -7,20 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  verLogin: boolean = false;
 
-  constructor() { }
+  constructor(public modalService: ModalService) { }
 
   ngOnInit() {
   }
 
-  verModal() {
-    this.verLogin = !this.verLogin;
-    // if (!this.verLogin) {
-    //   this.verLogin = true;
-    // } else {
-    //   this.verLogin = false;
-    // }
+  onSubmit(data: any) {
+    if (data.invalid) {
+      return;
+    }
+    console.log('data', data);
   }
 
 }

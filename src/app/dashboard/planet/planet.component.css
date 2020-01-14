@@ -1,3 +1,31 @@
 .dimensio{
-    width: 35%;
+    width: 60%;
+    margin-top: 40%;
+}
+
+.dimensio2{
+    width: 60%;
+    margin-top: 40%;
+}
+
+.dimensio3{
+    width: 8%;
+}
+
+.rectangulo{
+    border-radius: 25px;
+    border: 2px solid white;
+    width: 60%;
+    text-align: center;
+}
+
+.letras{
+    font-family:'Century Gothic','Futura',san-serif;
+    font-weight: bold;
+    font-size: 0.6em;
+    color:white;
+}
+
+.positionRelative{
+    position: relative;
 }

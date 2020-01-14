@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalService } from '../../services/service.index';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public modalService: ModalService) { }
 
   ngOnInit() {
+  }
+
+  activar(accion: string) {
+      this.modalService.modModal(accion);
+      console.log(this.modalService.getLogin());
   }
 
 }

@@ -8,6 +8,13 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { PlanetComponent } from './dashboard/planet/planet.component';
 import { FooterDownloadComponent } from './shared/footer-download/footer-download.component';
 import { LoginComponent } from './modal/login/login.component';
+import { ContactComponent } from './modal/contact/contact.component';
+
+import {FormsModule} from '@angular/forms';
+
+// Services
+import { ServiceModule } from './services/service.module';
+
 
 
 
@@ -18,11 +25,14 @@ import { LoginComponent } from './modal/login/login.component';
     NavbarComponent,
     PlanetComponent,
     FooterDownloadComponent,
-    LoginComponent
+    LoginComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent]

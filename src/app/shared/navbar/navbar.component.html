@@ -2,13 +2,13 @@
 <nav class="navbar navbar-expand-sm gothic navbar-dark">
     <ul class="navbar-nav mx-auto">
         <li class="nav-item">
-            <a class="nav-link" href="home">ABOUT</a>
+            <h4 class="nav-link" [ngClass]="this.modalService.getAbout() ? 'active' : ''" (click)="activar('about')">ABOUT</h4>
         </li>
         <li class="nav-item ml-2">
-            <a class="nav-link" href="about">LOGIN</a>
+            <h4 class="nav-link" [ngClass]="this.modalService.getLogin() ? 'active' : ''" (click)="activar('login')">LOGIN</h4>
         </li>
         <li class="nav-item ml-2">
-            <a class="nav-link" href="contact">CONTACT</a>
+            <h4 class="nav-link" [ngClass]="this.modalService.getContact() ? 'active' : ''" (click)="activar('contact')">CONTACT</h4>
         </li>
     </ul>
 </nav>

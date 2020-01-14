@@ -1,31 +1,56 @@
-<!-- Trigger/Open The Modal -->
-<button (click)="verModal()">Open Modal</button>
 
 <!-- The Modal -->
-<div *ngIf="verLogin" id="myModal" class="modal2 mt-3">
-  <div class="contenido">
-
+<div *ngIf="this.modalService.getLogin()" id="myModal" class="modal2">
+  <div class="container contenido">
+    <form (ngSubmit)="onSubmit(f.value)" #f="ngForm">
       <div class="row">
+        
+     
         <div class="col-12 text-center mt-3">
-          <input class="redondear" name="user" />
+          <!-- <input class="redondear" name="user" /> -->
+          <input type="email" 
+                class="redondear" 
+                ngModel
+                placeholder="email"
+                email="true"
+                name="email"
+                required>
+      
         </div>
-
         <div class="col-12 mt-2 text-center">
-          <input class="redondear" name="password" />
+          <!-- <input class="redondear" name="password" /> -->
+          <input type="password" 
+                class="redondear"
+                placeholder="password"
+                ngModel
+                name="password"
+                required>
         </div>
 
+        
         <div class="col-6 mt-2 text-left">
-            <label class="remenber"><input class="mr-2" type="checkbox" value="lsRememberMe" id="rememberMe">Remenber me</label>
+            <label class="remenber">
+              <input class="mr-2" 
+                      type="checkbox"
+                      ngModel
+                      [checked]=true
+                      name="remenber"
+                      id="rememberMe">
+              Remenber me
+            </label>
         </div>
-
+      
         <div class="col-6 text-right mt-2">
             <span class="remember"> <a class="remenber" href="#">Forgot password?</a></span>
         </div>
-
+        
+      
         <div class="col-12 mt-2 text-center">
-            <button type="button" class="btn btn-lg remenber">Login</button>
+            <button type="submit" class="btn btn-lg login">LOGIN</button>
         </div>
+     
 
       </div>
+    </form>
   </div>
 </div>

@@ -1,0 +1,21 @@
+<!-- The Modal -->
+<div *ngIf="this.modalService.getContact()" id="myModal" class="modal2">
+    <div class="contenido">
+  
+        <div class="row">
+          <div class="col-12 text-center mt-3">
+            <input class="redondear" name="email"  placeholder="email" />
+          </div>
+  
+          <div class="col-12 text-center mt-3">
+            <textarea class="redondear" name="comments" rows="5" placeholder="Go ahead,we're listening"></textarea>
+          </div>
+
+          <div class="col-12 mt-2 text-center">
+              <button type="button" class="btn btn-lg submitbutton">Submit</button>
+          </div>
+  
+        </div>
+    </div>
+  </div>
+  
