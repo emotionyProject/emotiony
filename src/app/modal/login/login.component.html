@@ -1,5 +1,6 @@
 
 <!-- The Modal -->
+
 <div *ngIf="this.modalService.getLogin()" id="myModal" class="modal2">
   <div class="container contenido">
     <form (ngSubmit)="onSubmit(f.value)" #f="ngForm">
@@ -7,7 +8,7 @@
         
      
         <div class="col-12 text-center mt-3">
-          <!-- <input class="redondear" name="user" /> -->
+         
           <input type="email" 
                 class="redondear" 
                 ngModel
@@ -18,7 +19,7 @@
       
         </div>
         <div class="col-12 mt-2 text-center">
-          <!-- <input class="redondear" name="password" /> -->
+          
           <input type="password" 
                 class="redondear"
                 placeholder="password"
@@ -46,7 +47,8 @@
         
       
         <div class="col-12 mt-2 text-center">
-            <button type="submit" class="btn btn-lg login">LOGIN</button>
+            <button type="submit" [disabled]="f.invalid"       
+                    class="btn btn-lg login">LOGIN</button>
         </div>
      
 
@@ -54,3 +56,4 @@
     </form>
   </div>
 </div>
+

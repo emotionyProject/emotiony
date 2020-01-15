@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit {
 
   activar(accion: string) {
       this.modalService.modModal(accion);
-      console.log(this.modalService.getLogin());
+      // console.log(this.modalService.getLogin());
   }
 
 }

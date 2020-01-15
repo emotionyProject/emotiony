@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalService } from '../../services/service.index';
+import { ModalService, UserService } from '../../services/service.index';
+import { Router } from '@angular/router';
+import { User } from '../../models/user.model';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-login',
@@ -9,7 +13,10 @@ import { ModalService } from '../../services/service.index';
 export class LoginComponent implements OnInit {
 
 
-  constructor(public modalService: ModalService) { }
+  constructor(
+    public router: Router,
+    public userService: UserService,
+    public modalService: ModalService) { }
 
   ngOnInit() {
   }
@@ -18,7 +25,15 @@ export class LoginComponent implements OnInit {
     if (data.invalid) {
       return;
     }
-    console.log('data', data);
+
+    let user = new User(data.email, data.password);
+    console.log('User', user);
+    if (this.userService.login(user)) {
+      this.router.navigate(['/grafica']);
+    } else {
+      Swal.fire('Usuario incorrecto', `El usuario ${user.email} o la contraseña són incorrectas` , 'error')
+      console.log('utiliza admin como contraseña');
+    }
   }
 
 }

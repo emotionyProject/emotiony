@@ -14,6 +14,8 @@ import {FormsModule} from '@angular/forms';
 
 // Services
 import { ServiceModule } from './services/service.module';
+import { GraficasComponent } from './dashboard/graficas/graficas.component';
+import { MainComponent } from './pages/main/main.component';
 
 
 
@@ -26,7 +28,9 @@ import { ServiceModule } from './services/service.module';
     PlanetComponent,
     FooterDownloadComponent,
     LoginComponent,
-    ContactComponent
+    ContactComponent,
+    GraficasComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
