@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { HeaderEmotionyComponent } from './shared/header-emotiony/header-emotiony.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -9,13 +10,14 @@ import { PlanetComponent } from './dashboard/planet/planet.component';
 import { FooterDownloadComponent } from './shared/footer-download/footer-download.component';
 import { LoginComponent } from './modal/login/login.component';
 import { ContactComponent } from './modal/contact/contact.component';
-
-import {FormsModule} from '@angular/forms';
+import { GraficasComponent } from './dashboard/graficas/graficas.component';
+import { MainComponent } from './pages/main/main.component';
+import { HighchartsChartModule } from 'highcharts-angular';
 
 // Services
 import { ServiceModule } from './services/service.module';
-import { GraficasComponent } from './dashboard/graficas/graficas.component';
-import { MainComponent } from './pages/main/main.component';
+import { ChartComponent } from './graficas/chart/chart.component';
+
 
 
 
@@ -30,12 +32,14 @@ import { MainComponent } from './pages/main/main.component';
     LoginComponent,
     ContactComponent,
     GraficasComponent,
-    MainComponent
+    MainComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HighchartsChartModule,
     ServiceModule
   ],
   providers: [],
