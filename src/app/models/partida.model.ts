@@ -14,4 +14,12 @@ export class Partida {
         public id: string,
         public _id?: string
     ) {}
+
+    getEmotions(pos: number): number[]{
+        let emotion: number[] = [];
+        for (let j = 0; j < this.emotions.length; j++) {
+            emotion[j] = this.emotions[j][pos];
+        }
+        return emotion;
+    }
 }

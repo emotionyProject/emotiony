@@ -11,7 +11,7 @@ import { Partida } from '../../models/partida.model';
 })
 export class GraficasComponent implements OnInit {
 
-
+  // position: number = 0;
   
 
   constructor(
@@ -19,17 +19,17 @@ export class GraficasComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.loadAllEmotionies();
+    // this.loadAllEmotionies();
   }
 
   loadAllEmotionies() {
-    this.emotioniesService.loadAllEmotionies()
-        .subscribe((resp: any) => {
-          // console.log(resp[0]);
-          // let valor= 'EMO1_1';
-          // console.log(resp[0][valor]);
-          this.emotioniesService.savePartida(resp[0]);
-        });
+    // this.emotioniesService.loadAllEmotionies()
+    //     .subscribe((resp: any) => {
+
+    //       if (resp.length > this.position) {
+    //         this.emotioniesService.savePartida(resp[this.position]);
+    //       }
+    //     });
   }
 
 
