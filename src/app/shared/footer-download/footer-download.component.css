@@ -1,7 +1,29 @@
 .dim10{
-    height: 30%;
+    width: 45%;
 }
 
 .dim5{
-    height: 15%;
+    width: 70%;
 }
+
+
+@media (max-width: 766px) and (min-width: 577px){
+    .dim10{
+        width: 45%;
+    }
+    
+    .dim5{
+        width: 60%;
+    }
+    
+  }
+
+  @media (max-width: 577px){
+    .dim10{
+        width: 20%;
+    }
+    
+    .dim5{
+        width: 30%;
+    }
+  }
