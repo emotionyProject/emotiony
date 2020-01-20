@@ -1,17 +1,17 @@
 <div class="boxChart__container">
-    <highcharts-chart
-      id="container"
-      [Highcharts]="Highcharts"
-      [constructorType]="chartConstructor"
-      [options]="chartOptions"
-      [callbackFunction]="chartCallback"
-      [(update)]="updateFromInput"
-      [oneToOne]="true"
-      style="width: 100%; height: 400px; display: block;"
-    >
-    </highcharts-chart>
+  <highcharts-chart
+  id="container" 
+  [Highcharts]="Highcharts"
+  [constructorType]="chartConstructor"
+  [options]="chartOptions"
+  [callbackFunction]="chartCallback"
+  [(update)]=updateFromInput
+  [oneToOne]="true"
+   style="width: 100%; height: 400px; display: block;">
+</highcharts-chart>
+
   </div>
   
 <div class="text-center mt-1">
-  <button type="button" class="btn btn-outline-primary" (click)="loadChart()">Renovar gráfica</button>
+  <button type="button" class="btn btn-outline-primary" (click)="cargar()">Renovar gráfica</button>
 </div>
