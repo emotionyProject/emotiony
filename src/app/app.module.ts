@@ -17,6 +17,7 @@ import { HighchartsChartModule } from 'highcharts-angular';
 // Services
 import { ServiceModule } from './services/service.module';
 import { ChartComponent } from './graficas/chart/chart.component';
+import { StackedComponent } from './graficas/stacked/stacked.component';
 
 
 
@@ -33,7 +34,8 @@ import { ChartComponent } from './graficas/chart/chart.component';
     ContactComponent,
     GraficasComponent,
     MainComponent,
-    ChartComponent
+    ChartComponent,
+    StackedComponent
   ],
   imports: [
     BrowserModule,

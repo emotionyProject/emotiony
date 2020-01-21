@@ -11,26 +11,20 @@ import { Partida } from '../../models/partida.model';
 })
 export class GraficasComponent implements OnInit {
 
-  // position: number = 0;
+  
   
 
   constructor(
     public emotioniesService: EmotioniesService
-  ) { }
+  ) {
+      document.body.style.background = 'white';
+  }
 
   ngOnInit() {
-    // this.loadAllEmotionies();
+
   }
 
-  loadAllEmotionies() {
-    // this.emotioniesService.loadAllEmotionies()
-    //     .subscribe((resp: any) => {
 
-    //       if (resp.length > this.position) {
-    //         this.emotioniesService.savePartida(resp[this.position]);
-    //       }
-    //     });
-  }
 
 
 
