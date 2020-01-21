@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalService } from '../../services/service.index';
+import { ModalService } from '../../../../services/service.index';
 
 @Component({
   selector: 'app-contact',

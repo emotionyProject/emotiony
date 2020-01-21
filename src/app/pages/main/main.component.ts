@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    document.body.style.background = 'black';
+  }
 
   ngOnInit() {
   }

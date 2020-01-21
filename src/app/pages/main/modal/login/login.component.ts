@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalService, UserService } from '../../services/service.index';
+import { ModalService, UserService } from '../../../../services/service.index';
 import { Router } from '@angular/router';
-import { User } from '../../models/user.model';
+import { User } from '../../../../models/user.model';
 import Swal from 'sweetalert2';
 
 

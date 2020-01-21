@@ -4,8 +4,8 @@ import highchartsMore from 'highcharts/highcharts-more';
 import highchartsFunnel from 'highcharts/modules/funnel';
 
 // import * as HighchartsMore from "highcharts/highcharts-more";
-import { EmotioniesService } from '../../services/emotionies/emotionies.service';
-import { Partida } from '../../models/partida.model';
+import { EmotioniesService } from '../../../services/emotionies/emotionies.service';
+import { Partida } from '../../../models/partida.model';
 
 highchartsMore(Highcharts);
 highchartsFunnel(Highcharts);

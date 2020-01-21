@@ -11,8 +11,6 @@ import { Partida } from '../../models/partida.model';
 })
 export class GraficasComponent implements OnInit {
 
-  
-  
 
   constructor(
     public emotioniesService: EmotioniesService

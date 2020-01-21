@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { GraficasComponent } from './dashboard/graficas/graficas.component';
+import { GraficasComponent } from './pages/graficas/graficas.component';
 import { MainComponent } from './pages/main/main.component';
 
 
