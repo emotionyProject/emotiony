@@ -17,6 +17,8 @@ import { ChartModule } from './pages/graficas/chart.module';
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent

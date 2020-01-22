@@ -1,9 +1,5 @@
-.tam15{
-    font-size: 2em;
+.full{
+    height: 100vh;
+    background-color:rgb(143,199,110);
+    border-right: 1px solid rgb(111, 141, 91);
 }
-
-.white{
-    background-color: white;
-}
-
-

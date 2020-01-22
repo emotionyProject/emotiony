@@ -5,7 +5,7 @@ import { MainComponent } from './pages/main/main.component';
 
 
 const routes: Routes = [
-  {path: 'grafica', component: GraficasComponent},
+  {path: 'dashboard', component: GraficasComponent},
   {path: '**', component: MainComponent}
 ];
 

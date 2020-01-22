@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
     let user = new User(data.email, data.password);
     console.log('User', user);
     if (this.userService.login(user)) {
-      this.router.navigate(['/grafica']);
+      this.router.navigate(['/dashboard']);
     } else {
       Swal.fire('Usuario incorrecto', `El usuario ${user.email} o la contraseña són incorrectas` , 'error')
       console.log('utiliza admin como contraseña');
