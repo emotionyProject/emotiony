@@ -1,22 +1,43 @@
 <app-navbar-dashboard></app-navbar-dashboard>
 
-<div class="row">
+<div class="row w-100">
   <div class="col-1 full text-center">
     <app-sidebar></app-sidebar>
   </div>
   <div class="col-11">
     <div class="row">
-      <div class="col-6">
+      <div class="col-4">
         <app-chart></app-chart>
       </div>
-      <div class="col-6">
+      <div class="col-4">
         <app-chart></app-chart>
       </div>
-      <div class="col-6 mt-5">
+      <div class="col-2">
+        <app-barchart></app-barchart>
+      </div>
+      <div class="col-6 mt-4">
         <app-stacked></app-stacked>
       </div>
-      <div class="col-6 mt-5">
+      <div class="col-6 mt-4">
         <app-stacked></app-stacked>
+      </div>
+      <div class="col-9 mt-4">
+        <app-area-basic></app-area-basic>
+        <app-area-negative></app-area-negative>
+        <div class="row">
+          <div class="col-6">
+             <app-heatmap></app-heatmap>
+          </div>
+          <div class="col-6">
+            <app-pareto></app-pareto>
+          </div>
+        </div>
+      </div>
+      <div class="col-2 mt-4">
+        <app-analytics></app-analytics>
+        <app-map></app-map>
+        <app-languages></app-languages>
+        <app-semi-circle></app-semi-circle>
       </div>
     </div>
   </div>

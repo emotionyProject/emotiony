@@ -1,0 +1,59 @@
+.bargraph {
+  list-style: none;
+  /* padding-top: 20px; */
+  width: 100%;
+}
+
+li{
+    list-style:none;
+    margin-left: 0px;
+    /* margin-top: 15px;*/
+    padding: 0px;;
+}
+
+ul{
+    margin: 0px;
+    padding: 0px;
+
+} 
+
+
+
+.blue{
+    margin: 0px;
+    background-color: rgb(134,177,235);
+    width: 80%;
+}
+
+.black{
+    margin: 0px;
+    background-color: rgb(67,67,72);
+    width: 80%;
+}
+
+.green{
+    margin: 0px;
+    background-color: rgb(169,255,150);
+    width: 80%; 
+}
+
+
+
+ul.bargraph li {
+
+  height: 35px;
+  color: white;
+  text-align: left;
+  font-style: italic;
+  font-weight: bolder;
+  font-size: 14px;
+  line-height: 35px;
+  /* padding: 0px 20px;
+  margin-bottom: 5px; */
+}
+
+ul.bargraph li.reddeep {
+  background: grey;
+  width: 100%;
+}
+
