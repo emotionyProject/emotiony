@@ -9,6 +9,7 @@ import { Partida } from '../../models/partida.model';
 export class EmotioniesService {
 
   game: Partida;
+  position: number = Math.floor((Math.random() * (100 - 1)));
 
   constructor(
     public http: HttpClient
@@ -45,6 +46,15 @@ export class EmotioniesService {
 
   getGame(): Partida {
     return this.game;
+  }
+
+  getPosition(): number {
+    return this.position;
+  }
+
+  setPosition(newPosition: number) {
+    this.position = newPosition;
+    console.log("new", this.position);
   }
 
 

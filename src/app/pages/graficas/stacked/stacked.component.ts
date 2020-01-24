@@ -97,6 +97,8 @@ export class StackedComponent implements OnInit {
 
             this.position = 1;
 
+            this.position = this.emotioniesService.getPosition();
+
             this.hideLoading();
 
 

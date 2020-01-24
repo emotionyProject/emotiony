@@ -223,6 +223,9 @@ export class ChartComponent implements OnInit {
 
                 this.position = 1;
 
+                this.position = this.emotioniesService.getPosition();
+                console.log(this.position);
+
                 this.hideLoading();
 
 
