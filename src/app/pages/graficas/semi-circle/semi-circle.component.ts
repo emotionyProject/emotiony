@@ -38,13 +38,14 @@ export class SemiCircleComponent implements OnInit {
       chart: {
         plotBackgroundColor: null,
         plotBorderWidth: 0,
+        margin: [0,0, 175, 0],
         plotShadow: false
     },
     title: {
         text: 'Browser<br>shares<br>2017',
         align: 'center',
         verticalAlign: 'middle',
-        y: 60
+        y: 0
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'

@@ -20,6 +20,7 @@ import { ParetoComponent } from './pareto/pareto.component';
 import { SemiCircleComponent } from './semi-circle/semi-circle.component';
 import { LanguagesComponent } from './languages/languages.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
+import { FiltersComponent } from './filters/filters.component';
 
 
 
@@ -39,7 +40,8 @@ import { AnalyticsComponent } from './analytics/analytics.component';
         ParetoComponent,
         SemiCircleComponent,
         LanguagesComponent,
-        AnalyticsComponent
+        AnalyticsComponent,
+        FiltersComponent
     ],
     imports: [
         CommonModule,

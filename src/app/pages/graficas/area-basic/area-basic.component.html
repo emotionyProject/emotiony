@@ -1,1 +1,14 @@
-<p>area-basic works!</p>
+<div class="boxChart__container">
+    <highcharts-chart
+    id="container" 
+    [Highcharts]="Highcharts"
+    [constructorType]="chartConstructor"
+    [options]="chartOptions"
+    [callbackFunction]="chartCallback"
+    [(update)]=updateFromInput
+    [oneToOne]="true"
+     style="width: 100%; height: 400px; display: block;">
+  </highcharts-chart>
+  </div>
+  
+
