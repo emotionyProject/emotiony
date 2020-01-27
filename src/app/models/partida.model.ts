@@ -158,7 +158,7 @@ export class Partida {
             let pos= i +1;
             categories.push('EMO' + pos);
         }
-        console.log(categories);
+        // console.log(categories);
         return categories;
     }
 
@@ -167,5 +167,35 @@ export class Partida {
     getPositionStacked(positions:number[], position:number ): number[]{
         return [this.emotions[positions[0]][position], this.emotions[positions[1]][position], this.emotions[positions[2]][position],
         this.emotions[positions[3]][position], this.emotions[positions[4]][position], this.emotions[positions[5]][position]];
+    }
+
+
+    // =================================== Pareto =================================
+
+    // most values emotions
+    getMostPrimaryEmotions(): PosValue[]{
+        let emotionValue: PosValue[] = this.getArrayEmo();
+        emotionValue.sort((a: PosValue, b: PosValue) => b.value - a.value);
+        // console.log(emotionValue);
+        return emotionValue;
+    }
+
+    getArrayEmo() {
+        let emotionValue: PosValue[] = [];
+        let count =0;
+        for(let j = 0; j < this.emotions.length; j++) {
+           count = this.sumEmo(j);
+           emotionValue.push({'pos': j, 'value': count});
+        }
+        // console.log(emotionValue);
+        return emotionValue;
+    }
+
+    sumEmo(pos: number): number{
+        let count = 0;
+        for(let i=0; i<this.emotions[pos].length; i++){
+            count += this.emotions[pos][i];
+        }
+        return count;
     }
 }
