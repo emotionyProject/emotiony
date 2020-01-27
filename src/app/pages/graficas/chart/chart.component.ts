@@ -221,10 +221,9 @@ export class ChartComponent implements OnInit {
 
                 // this.position = Math.floor((Math.random() * (resp.length - 1)));
 
-                this.position = 1;
 
                 this.position = this.emotioniesService.getPosition();
-                console.log(this.position);
+                console.log('posicion', this.position);
 
                 this.hideLoading();
 

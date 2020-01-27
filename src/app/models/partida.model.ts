@@ -198,4 +198,24 @@ export class Partida {
         }
         return count;
     }
+
+
+     // =================================== Semicercle =================================
+
+
+    getEmotionPercentage(): PosValue[]{
+        let emotionValue = this.getMostPrimaryEmotions();
+        this.getTotalValue(emotionValue);
+        return emotionValue;
+    }
+
+    getTotalValue(emotionValue: PosValue[]) {
+        let total = 0;
+        for(let j=0; j< emotionValue.length; j++){
+            total += emotionValue[j].value;
+        }
+        for(let j= 0; j<emotionValue.length; j++){
+            emotionValue[j].value = (emotionValue[j].value / total) * 100;
+        }
+    }
 }
