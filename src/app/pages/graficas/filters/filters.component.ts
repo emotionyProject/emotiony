@@ -13,10 +13,14 @@ export class FiltersComponent implements OnInit {
   ngOnInit() {
   }
 
-  findData(value){
-    if(value != '' && value != null){
-      this.emotioniesService.setPosition(parseInt(value));
-    }
+  // findData(value){
+  //   if(value != '' && value != null){
+  //     this.emotioniesService.setPosition(parseInt(value));
+  //   }
+  // }
+
+  onSubmit(data: any) {
+    console.log(data);
   }
 
 }

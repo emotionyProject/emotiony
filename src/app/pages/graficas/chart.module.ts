@@ -2,13 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HighchartsChartModule } from 'highcharts-angular';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 
 // Component
 import { ChartComponent } from './chart/chart.component';
 import { StackedComponent } from './stacked/stacked.component';
+
 // import { NavbarDashboardComponent } from './navbar-dashboard/navbar-dashboard.component';
 import { GraficasComponent } from './graficas.component';
 // import { SidebarComponent } from './sidebar/sidebar.component';
@@ -26,7 +27,6 @@ import { FiltersComponent } from './filters/filters.component';
 // Shared Modules
 import { SharedModule } from '../shared/shared.module';
 import { MediaComponent } from './media/media.component';
-
 
 
 
@@ -55,6 +55,7 @@ import { MediaComponent } from './media/media.component';
         RouterModule,
         HighchartsChartModule,
         ReactiveFormsModule,
+        FormsModule,
         SharedModule
     ]
 })

@@ -16,22 +16,103 @@
         <button type="button" class="btn btn-sm btn-secondary width100">Apply</button>
     </div>
 </div> -->
+<form (ngSubmit)="onSubmit(f.value)" #f="ngForm">
+<div class="row mt-2">
+   
+    <div class="col-2">
+        <input type="text"
+        ngModel
+        placeholder="ubicacion1"
+        name="ubicacion1"
+        required>
 
-<div class="row">
-    <div class="col-4">
-        <p class="tamany1">www.Zara.com</p>
-        <p class="tamany2">#Shoes&Bags</p>
+        <input type="text"
+        ngModel
+        class="mt-1"
+        placeholder="ubicacion2"
+        name="ubicacion2"
+        required>
+
     </div>
     <div class="col-2 mt-2">
-        <input type="number" placeholder="Data" class="w-75" #input (keyup)="findData(input.value)">
+        <input type="text"
+        ngModel
+        placeholder="language"
+        name="ubicacion1"
+        required>
     </div>
-    <div class="col-2 mt-2">
-        <input type="text" placeholder="Project" class="w-75">
+    <div class="col-3 mt-2">
+        <div class="row">
+            <div class="col-12">
+              <div class="row">
+                  <div class="col-2">
+                      <label>Start: </label>
+                  </div>
+                  <div class="col-5">
+                      <input type="date"
+                      ngModel
+                      class="ml-1"
+                      placeholder=""
+                      name="startDate"
+                      required>
+                  </div>
+                  <div class="col-5">
+                      <input type="time"
+                      ngModel
+                      placeholder="data"
+                      name="startTime"
+                      required>
+                  </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row">
+                  <div class="col-2">
+                      <label>End: </label>
+                  </div>
+                  <div class="col-5">
+                      <input type="date"
+                      ngModel
+                      class="ml-1"
+                      placeholder=""
+                      name="EndDate"
+                      required>
+                  </div>
+                  <div class="col-5">
+                      <input type="time"
+                      ngModel
+                      placeholder="data"
+                      name="EndTime"
+                      required>
+                  </div>
+              </div>
+            </div>
+        </div>
     </div>
-    <div class="col-2 mt-2">
-        <input type="text" placeholder="Product" class="w-75">
+    <div class="col-3 mt-2">
+        <input type="text"
+        ngModel
+        placeholder="#hashtag"
+        name="hashtag"
+        required>
+
+        <input type="text"
+        ngModel
+        class="mt-1"
+        placeholder="tag/project"
+        name="tag"
+        required>
+
+        <input type="text"
+        ngModel
+        class="mt-1"
+        placeholder="origen"
+        name="origen"
+        required>
     </div>
     <div class="col-2 mt-2">
         <button type="button" class="btn btn-sm btn-secondary width100">Apply</button>
     </div>
+
 </div>
+</form>
