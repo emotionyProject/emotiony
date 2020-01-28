@@ -41,14 +41,14 @@ export class SemiCircleComponent implements OnInit {
             chart: {
                 plotBackgroundColor: null,
                 plotBorderWidth: 0,
-                margin: [0, 0, 175, 0],
+                margin: [0, 0, 300, 0],
                 plotShadow: false
             },
             title: {
                 text: '',
                 // text: '<p class="titleCircle">Browser<br>shares<br>2017</p>',
                 align: 'center',
-                fontSize: "3px",
+                fontSize: '3px',
                 verticalAlign: 'middle',
                 y: 0
             },
@@ -59,7 +59,7 @@ export class SemiCircleComponent implements OnInit {
                 pie: {
                     dataLabels: {
                         enabled: true,
-                        distance: -50,
+                        distance: -100,
                         style: {
                             fontWeight: 'bold',
                             color: 'white'
@@ -69,6 +69,11 @@ export class SemiCircleComponent implements OnInit {
                     endAngle: 90,
                     center: ['50%', '75%'],
                     size: '110%'
+                }
+            },
+            credits: {
+                position: {
+                    y: -150
                 }
             },
             series: [{

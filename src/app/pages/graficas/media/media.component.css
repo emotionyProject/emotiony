@@ -1,0 +1,23 @@
+.blue{
+    background-color: rgb(134,177,235);
+}
+
+.black{
+    background-color: rgb(67,67,72);
+}
+
+.green{
+    background-color: rgb(169,255,150);
+}
+
+.textBlue{
+    color: rgb(134,177,235);
+}
+
+.textBlack{
+    color: rgb(67,67,72);
+}
+
+.textGreen{
+    color: green
+}

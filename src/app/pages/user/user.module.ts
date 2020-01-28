@@ -3,20 +3,19 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
-import { ProjectsComponent } from './projects.component';
-import { CreateTagComponent } from './create-tag/create-tag.component';
-import { ListTagsComponent } from './list-tags/list-tags.component';
+import { UserComponent } from './user.component';
 
 // Shared Module
+
 import { SharedModule } from '../shared/shared.module';
+
+
 
 
 @NgModule({
 
     declarations: [
-        ProjectsComponent,
-        CreateTagComponent,
-        ListTagsComponent
+        UserComponent
     ],
     imports: [
         CommonModule,
@@ -27,4 +26,4 @@ import { SharedModule } from '../shared/shared.module';
 })
 
 
-export class ProjectModule {}
+export class UserModule {}

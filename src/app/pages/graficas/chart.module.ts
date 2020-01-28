@@ -24,8 +24,8 @@ import { AnalyticsComponent } from './analytics/analytics.component';
 import { FiltersComponent } from './filters/filters.component';
 
 // Shared Modules
-import { NavbarDashboardModule } from './navbar-dashboard/navbar-dashboard.module';
-import { SidebarModule } from './sidebar/sidebar.module';
+import { SharedModule } from '../shared/shared.module';
+import { MediaComponent } from './media/media.component';
 
 
 
@@ -47,15 +47,15 @@ import { SidebarModule } from './sidebar/sidebar.module';
         SemiCircleComponent,
         LanguagesComponent,
         AnalyticsComponent,
-        FiltersComponent
+        FiltersComponent,
+        MediaComponent
     ],
     imports: [
         CommonModule,
         RouterModule,
         HighchartsChartModule,
         ReactiveFormsModule,
-        NavbarDashboardModule,
-        SidebarModule
+        SharedModule
     ]
 })
 

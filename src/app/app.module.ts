@@ -15,6 +15,9 @@ import { ServiceModule } from './services/service.module';
 import { MainModule } from './pages/main/main.module';
 import { ChartModule } from './pages/graficas/chart.module';
 import { ProjectModule } from './pages/projects/project.module';
+import { UserModule } from './pages/user/user.module';
+import { SharedModule } from './pages/shared/shared.module';
+
 
 
 
@@ -30,7 +33,9 @@ import { ProjectModule } from './pages/projects/project.module';
     ServiceModule,
     MainModule,
     ChartModule,
-    ProjectModule
+    ProjectModule,
+    UserModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
