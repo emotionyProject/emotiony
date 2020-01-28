@@ -1,0 +1,9 @@
+.full{
+    height: 100%vh;
+    background-color:rgb(143,199,110);
+    border-right: 1px solid rgb(111, 141, 91);
+}
+
+.mt-10{
+    margin-top: 120px;
+}

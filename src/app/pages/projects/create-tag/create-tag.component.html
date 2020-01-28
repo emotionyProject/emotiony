@@ -1,0 +1,119 @@
+<h2 class="ml-2"> Create Project/Tag</h2>
+<form (ngSubmit)="onSubmit(f.value)" #f="ngForm">
+    <div class="row w-100">
+        <div class="col-3 text-center mt-4">
+         
+            <input type="text"
+                  ngModel
+                  placeholder="ubicacion1"
+                  name="ubicacion1"
+                  required>
+
+                  <input type="text"
+                  ngModel
+                  class="mt-1"
+                  placeholder="ubicacion2"
+                  name="ubicacion2"
+                  required>
+        
+          </div>
+          <div class="col-3 text-center mt-4">
+         
+            <input type="text"
+            ngModel
+            placeholder="language"
+            name="ubicacion1"
+            required>
+        
+          </div>
+          <div class="col-3 text-center mt-4">
+              <div class="row">
+                  <div class="col-12">
+                    <div class="row">
+                        <div class="col-2">
+                            <label>Start: </label>
+                        </div>
+                        <div class="col-5">
+                            <input type="date"
+                            ngModel
+                            class="ml-1"
+                            placeholder=""
+                            name="startDate"
+                            required>
+                        </div>
+                        <div class="col-5">
+                            <input type="time"
+                            ngModel
+                            placeholder="data"
+                            name="startTime"
+                            required>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="row">
+                        <div class="col-2">
+                            <label>End: </label>
+                        </div>
+                        <div class="col-5">
+                            <input type="date"
+                            ngModel
+                            class="ml-1"
+                            placeholder=""
+                            name="EndDate"
+                            required>
+                        </div>
+                        <div class="col-5">
+                            <input type="time"
+                            ngModel
+                            placeholder="data"
+                            name="EndTime"
+                            required>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+           
+          
+          </div>
+          <div class="col-3 text-center mt-4">
+         
+            <input type="text"
+                  ngModel
+                  placeholder="#hashtag"
+                  name="ubicacion1"
+                  required>
+
+                  <input type="text"
+                  ngModel
+                  class="mt-1"
+                  placeholder="from"
+                  name="ubicacion2"
+                  required>
+        
+          </div>
+    </div>
+
+    <div class="mt-5 row">
+        <div class="col-3 text-center">
+            <input type="text"
+            ngModel
+            placeholder="new tag"
+            name="newTag"
+            required>
+        </div>
+        <div class="col-3 text-center">
+            <input type="text"
+            ngModel
+            placeholder="project or new project"
+            name="newProject"
+            required>
+            
+        </div>
+        <!-- [disabled]="f.invalid" -->
+        <div class="col-3 text-center">
+            <button type="submit" 
+            class="btn btn-lg bg-secondary">Add Tag</button>
+        </div>
+    </div>
+</form>

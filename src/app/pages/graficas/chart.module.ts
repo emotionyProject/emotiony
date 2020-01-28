@@ -9,9 +9,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 // Component
 import { ChartComponent } from './chart/chart.component';
 import { StackedComponent } from './stacked/stacked.component';
-import { NavbarDashboardComponent } from './navbar-dashboard/navbar-dashboard.component';
+// import { NavbarDashboardComponent } from './navbar-dashboard/navbar-dashboard.component';
 import { GraficasComponent } from './graficas.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
+// import { SidebarComponent } from './sidebar/sidebar.component';
 import { BarchartComponent } from './barchart/barchart.component';
 import { AreaBasicComponent } from './area-basic/area-basic.component';
 import { AreaNegativeComponent } from './area-negative/area-negative.component';
@@ -23,6 +23,13 @@ import { LanguagesComponent } from './languages/languages.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { FiltersComponent } from './filters/filters.component';
 
+// Shared Modules
+import { NavbarDashboardModule } from './navbar-dashboard/navbar-dashboard.module';
+import { SidebarModule } from './sidebar/sidebar.module';
+
+
+
+
 
 
 @NgModule({
@@ -31,8 +38,6 @@ import { FiltersComponent } from './filters/filters.component';
         ChartComponent,
         StackedComponent,
         GraficasComponent,
-        NavbarDashboardComponent,
-        SidebarComponent,
         BarchartComponent,
         AreaBasicComponent,
         AreaNegativeComponent,
@@ -48,7 +53,9 @@ import { FiltersComponent } from './filters/filters.component';
         CommonModule,
         RouterModule,
         HighchartsChartModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        NavbarDashboardModule,
+        SidebarModule
     ]
 })
 

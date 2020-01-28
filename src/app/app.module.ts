@@ -14,8 +14,7 @@ import { ServiceModule } from './services/service.module';
 // Modulos propios
 import { MainModule } from './pages/main/main.module';
 import { ChartModule } from './pages/graficas/chart.module';
-
-
+import { ProjectModule } from './pages/projects/project.module';
 
 
 
@@ -30,7 +29,8 @@ import { ChartModule } from './pages/graficas/chart.module';
     // HighchartsChartModule,
     ServiceModule,
     MainModule,
-    ChartModule
+    ChartModule,
+    ProjectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
