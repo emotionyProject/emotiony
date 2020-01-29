@@ -54,7 +54,6 @@ export class EmotioniesService {
 
   setPosition(newPosition: number) {
     this.position = newPosition;
-    console.log("new", this.position);
   }
 
 

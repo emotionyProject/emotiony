@@ -1,29 +1,31 @@
 <h2 class="ml-2"> Create Project/Tag</h2>
-<form (ngSubmit)="onSubmit(f.value)" #f="ngForm">
+<form (ngSubmit)="onSubmit(f)" #f="ngForm"> 
     <div class="row w-100">
         <div class="col-3 text-center mt-4">
-         
+            <!-- *ngIf="projectService.editTag" -->
             <input type="text"
-                  ngModel
                   placeholder="ubicacion1"
+                  [ngModel]="projectService.editTag ? projectService.editTag.ubicacion1 : ''"
                   name="ubicacion1"
-                  required>
+                  >
 
                   <input type="text"
                   ngModel
                   class="mt-1"
+                  [ngModel]="projectService.editTag ? projectService.editTag.ubicacion2 : ''"
                   placeholder="ubicacion2"
                   name="ubicacion2"
-                  required>
+                  >
         
           </div>
           <div class="col-3 text-center mt-4">
          
             <input type="text"
             ngModel
+            [ngModel]="projectService.editTag ? projectService.editTag.language : ''"
             placeholder="language"
-            name="ubicacion1"
-            required>
+            name="language"
+            >
         
           </div>
           <div class="col-3 text-center mt-4">
@@ -38,15 +40,17 @@
                             ngModel
                             class="ml-1"
                             placeholder=""
+                            [ngModel]="projectService.editTag ? projectService.editTag.startDate : ''"
                             name="startDate"
-                            required>
+                            >
                         </div>
                         <div class="col-5">
                             <input type="time"
                             ngModel
                             placeholder="data"
                             name="startTime"
-                            required>
+                            [ngModel]="projectService.editTag ? projectService.editTag.startTime : ''"
+                            >
                         </div>
                     </div>
                   </div>
@@ -60,15 +64,17 @@
                             ngModel
                             class="ml-1"
                             placeholder=""
-                            name="EndDate"
-                            required>
+                            name="endDate"
+                            [ngModel]="projectService.editTag ? projectService.editTag.endDate : ''"
+                            >
                         </div>
                         <div class="col-5">
                             <input type="time"
                             ngModel
                             placeholder="data"
-                            name="EndTime"
-                            required>
+                            name="endTime"
+                            [ngModel]="projectService.editTag ? projectService.editTag.endTime : ''"
+                            >
                         </div>
                     </div>
                   </div>
@@ -81,15 +87,17 @@
             <input type="text"
                   ngModel
                   placeholder="#hashtag"
-                  name="ubicacion1"
-                  required>
+                  name="hashtag"
+                  [ngModel]="projectService.editTag ? projectService.editTag.hashtag : ''"
+                  >
 
                   <input type="text"
                   ngModel
                   class="mt-1"
                   placeholder="from"
-                  name="ubicacion2"
-                  required>
+                  name="from"
+                  [ngModel]="projectService.editTag ? projectService.editTag.from : ''"
+                  >
         
           </div>
     </div>
@@ -100,14 +108,15 @@
             ngModel
             placeholder="new tag"
             name="newTag"
-            required>
+            [ngModel]="projectService.editTag ? projectService.editTag.newTag : ''"
+            >
         </div>
         <div class="col-3 text-center">
             <input type="text"
             ngModel
             placeholder="project or new project"
             name="newProject"
-            required>
+            >
             
         </div>
         <!-- [disabled]="f.invalid" -->

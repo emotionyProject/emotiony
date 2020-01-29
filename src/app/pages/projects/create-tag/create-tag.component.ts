@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { ProjectsService } from '../../../services/service.index';
+import { FormGroup } from '@angular/forms';
+
 
 @Component({
   selector: 'app-create-tag',
@@ -7,13 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateTagComponent implements OnInit {
 
-  constructor() { }
+  myForm: FormGroup;
+
+  // @Output()
+  // enviar: EventEmitter<any> = new EventEmitter<any>();
+
+  constructor(public projectService: ProjectsService) { }
 
   ngOnInit() {
   }
 
   onSubmit(data: any) {
-    console.log(data);
+    // console.log(data.value);
+    this.projectService.addTag(data.value);
+    data.reset();
   }
+
 
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectsService } from '../../../services/service.index';
+import { Tag } from '../../../models/tag.model';
 
 @Component({
   selector: 'app-list-tags',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListTagsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public projectService: ProjectsService) { }
 
   ngOnInit() {
+  }
+
+  editTag(tag: Tag){
+    this.projectService.editarTag(tag);
   }
 
 }

@@ -5,7 +5,8 @@ import { CommonModule } from '@angular/common';
 import {
     ModalService,
     UserService,
-    EmotioniesService
+    EmotioniesService,
+    ProjectsService
 } from './service.index';
 
 @NgModule({
@@ -16,7 +17,8 @@ import {
     providers: [
         ModalService,
         UserService,
-        EmotioniesService
+        EmotioniesService,
+        ProjectsService
     ],
     declarations: []
 })

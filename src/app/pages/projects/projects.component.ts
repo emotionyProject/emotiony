@@ -14,4 +14,8 @@ export class ProjectsComponent implements OnInit {
   ngOnInit() {
   }
 
+  mostrar(event){
+
+  }
+
 }
