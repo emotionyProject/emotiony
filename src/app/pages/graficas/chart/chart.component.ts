@@ -36,6 +36,8 @@ export class ChartComponent implements OnInit {
 
     chartOptions;
 
+    allGames: boolean = false;
+
 
     constructor(
         public emotioniesService: EmotioniesService
@@ -102,18 +104,22 @@ export class ChartComponent implements OnInit {
 
                 // this.position = Math.floor((Math.random() * (resp.length - 1)));
 
-                this.position = 1;
+                // this.position = 1;
 
                 this.hideLoading();
 
-
+                this.position = this.emotioniesService.getPosition();
 
                 if (resp.length > this.position) {
-                    this.partida = this.emotioniesService.savePartida(resp[this.position]);
 
                     // console.log(this.partida);
-
-
+                    if (this.allGames){
+                        console.log('Todas las partidas');
+                        this.partida = this.emotioniesService.saveManyPartidas(resp);
+                    } else {
+                         console.log('Una Partida',this.position);
+                        this.partida = this.emotioniesService.savePartida(resp[this.position]);
+                    }
 
                     this.series = [{
                         data: this.partida.getEmotionsPositioned(0),
@@ -273,6 +279,12 @@ export class ChartComponent implements OnInit {
 
     cargar2() {
         this.loadChartByStatus();
+        this.showLoading2();
+    }
+
+    showAllGames() {
+        this.allGames = !this.allGames;
+        this.loadChart();
         this.showLoading2();
     }
 
