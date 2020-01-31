@@ -37,7 +37,9 @@ export class ChartComponent implements OnInit {
     chartOptions;
 
     allGames: boolean = false;
-
+    joinRow: boolean = true;
+    allGameButton: string = 'All Games';
+    loadChartButton: string =  'Disjoin Rows';
 
     constructor(
         public emotioniesService: EmotioniesService
@@ -118,7 +120,7 @@ export class ChartComponent implements OnInit {
                         this.partida = this.emotioniesService.saveManyPartidas(resp);
                     } else {
                          console.log('Una Partida',this.position);
-                        this.partida = this.emotioniesService.savePartida(resp[this.position]);
+                         this.partida = this.emotioniesService.savePartida(resp[this.position]);
                     }
 
                     this.series = [{
@@ -176,7 +178,15 @@ export class ChartComponent implements OnInit {
 
                 this.hideLoading();
                 if (resp.length > this.position) {
-                    this.partida = this.emotioniesService.savePartida(resp[this.position]);
+
+                    if (this.allGames){
+                        console.log('Todas las partidas');
+                        this.partida = this.emotioniesService.saveManyPartidas(resp);
+                    } else {
+                         console.log('Una Partida',this.position);
+                         this.partida = this.emotioniesService.savePartida(resp[this.position]);
+                    }
+                    // this.partida = this.emotioniesService.savePartida(resp[this.position]);
                     // console.log(this.partida);
 
                     // console.log('emotion1', this.partida.getEmotions(0));
@@ -235,8 +245,14 @@ export class ChartComponent implements OnInit {
 
 
                 if (resp.length > this.position) {
-                    this.partida = this.emotioniesService.savePartida(resp[this.position]);
-                    
+                    // this.partida = this.emotioniesService.savePartida(resp[this.position]);
+                    if (this.allGames){
+                        console.log('Todas las partidas');
+                        this.partida = this.emotioniesService.saveManyPartidas(resp);
+                    } else {
+                         console.log('Una Partida',this.position);
+                         this.partida = this.emotioniesService.savePartida(resp[this.position]);
+                    }
                     // console.log(this.partida);
 
 
@@ -284,8 +300,29 @@ export class ChartComponent implements OnInit {
 
     showAllGames() {
         this.allGames = !this.allGames;
-        this.loadChart();
+        if (!this.joinRow) {
+            this.loadChart();
+        } else {
+            this.loadChartByStatus();
+        }
+        if (this.allGameButton === 'All Games') {
+            this.allGameButton = 'One Game';
+        } else {
+            this.allGameButton = 'All Games';
+        }
+        // this.showLoading2();
+    }
+
+    loadCLickChart(){
+        if (this.joinRow) {
+            this.loadChart();
+            this.loadChartButton = 'Join Rows';
+        } else {
+            this.loadChartByStatus();
+            this.loadChartButton = 'Disjoin Rows';
+        }
         this.showLoading2();
+        this.joinRow = !this.joinRow;
     }
 
 

@@ -56,6 +56,8 @@ export class EmotioniesService {
       }
       partida = this.mediaPartidas(partida, partidas.length);
     }
+    partida.correo = '#Hashtag';
+    partida.idPartida = '';
     this.game = partida;
     console.log(this.game.emotions);
     return this.game;

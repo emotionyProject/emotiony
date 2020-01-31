@@ -7,25 +7,26 @@
   [callbackFunction]="chartCallback"
   [(update)]=updateFromInput
   [oneToOne]="true"
+ 
    style="width: 100%; height: 400px; display: block;">
 </highcharts-chart>
 </div>
 
 <div class="container">
   <div class="row">
-    <div class="col-4">
+    <!-- <div class="col-4">
       <div class="text-center mt-1">
         <button type="button" class="btn btn-outline-primary" (click)="cargar()">Renovar gráfica1</button>
       </div>
-    </div>
-    <div class="col-4">
+    </div>-->
+    <div class="col-6">
       <div class="text-center mt-1">
-        <button type="button" class="btn btn-outline-primary" (click)="cargar2()">Renovar gráfica2</button>
+      <button type="button" class="btn btn-outline-primary" (click)="loadCLickChart()">{{loadChartButton}}</button>
       </div>
     </div>
-    <div class="col-4">
+    <div class="col-6">
       <div class="text-center mt-1">
-        <button type="button" class="btn btn-outline-primary" (click)="showAllGames()">All Games</button>
+      <button type="button" class="btn btn-outline-primary" (click)="showAllGames()">{{allGameButton}}</button>
       </div>
     </div>
   </div>
