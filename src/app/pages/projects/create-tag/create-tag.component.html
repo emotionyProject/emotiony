@@ -1,7 +1,7 @@
 <h2 class="ml-2"> Create Project/Tag</h2>
 <form (ngSubmit)="onSubmit(f)" #f="ngForm"> 
     <div class="row w-100">
-        <div class="col-3 text-center mt-4">
+        <div class="col-sm-6 col-lg-3 text-center mt-4">
             <!-- *ngIf="projectService.editTag" -->
             <input type="text"
                   placeholder="ubicacion1"
@@ -18,7 +18,7 @@
                   >
         
           </div>
-          <div class="col-3 text-center mt-4">
+          <div class="col-sm-6 col-lg-3 text-center mt-4">
          
             <input type="text"
             ngModel
@@ -28,12 +28,12 @@
             >
         
           </div>
-          <div class="col-3 text-center mt-4">
+          <div class="col-sm-6 col-lg-3 text-center mt-4">
               <div class="row">
-                  <div class="col-12">
+                  <div class="col-12 w-100">
                     <div class="row">
                         <div class="col-2">
-                            <label>Start: </label>
+                            <label class="tag">Start: </label>
                         </div>
                         <div class="col-5">
                             <input type="date"
@@ -54,10 +54,10 @@
                         </div>
                     </div>
                   </div>
-                  <div class="col-12">
+                  <div class="col-12 w-100">
                     <div class="row">
                         <div class="col-2">
-                            <label>End: </label>
+                            <label class="tag">End: </label>
                         </div>
                         <div class="col-5">
                             <input type="date"
@@ -82,7 +82,7 @@
            
           
           </div>
-          <div class="col-3 text-center mt-4">
+          <div class="col-sm-6 col-lg-3 text-center mt-4 w-100">
          
             <input type="text"
                   ngModel
@@ -103,7 +103,7 @@
     </div>
 
     <div class="mt-5 row">
-        <div class="col-3 text-center">
+        <div class="col-sm-4 col-lg-3 text-center">
             <input type="text"
             ngModel
             placeholder="new tag"
@@ -111,7 +111,7 @@
             [ngModel]="projectService.editTag ? projectService.editTag.newTag : ''"
             >
         </div>
-        <div class="col-3 text-center">
+        <div class="col-sm-4 col-md-3 text-center">
             <input type="text"
             ngModel
             placeholder="project or new project"
@@ -120,7 +120,7 @@
             
         </div>
         <!-- [disabled]="f.invalid" -->
-        <div class="col-3 text-center">
+        <div class="col-sm-5 col-md-3 text-center">
             <button type="submit" 
             class="btn btn-lg bg-secondary">Add Tag</button>
         </div>
