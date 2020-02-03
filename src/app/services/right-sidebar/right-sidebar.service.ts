@@ -10,4 +10,9 @@ export class RightSidebarService {
   hashtag: boolean = false;
 
   constructor() { }
+
+  isVisible(): boolean {
+    return this.location || this.language || this.hashtag;
+  }
+  
 }

@@ -12,6 +12,8 @@ export class CreateTagComponent implements OnInit {
 
   myForm: FormGroup;
 
+  listFrom: String[] = ['Owner', 'Twitter', 'Instagram', 'Facebook']
+
   // @Output()
   // enviar: EventEmitter<any> = new EventEmitter<any>();
 

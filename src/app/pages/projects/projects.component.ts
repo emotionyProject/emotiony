@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RightSidebarService } from '../../services/service.index';
 
 @Component({
   selector: 'app-projects',
@@ -7,15 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor() { 
+  constructor(public rightSidebarService: RightSidebarService) {
     document.body.style.background = 'white';
   }
 
   ngOnInit() {
-  }
-
-  mostrar(event){
-
   }
 
 }

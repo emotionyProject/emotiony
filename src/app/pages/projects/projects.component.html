@@ -33,6 +33,9 @@
       <div class="col-12 mt-10">
         <app-list-tags></app-list-tags>
       </div>
+      <div *ngIf="rightSidebarService.isVisible()">
+        <app-right-sidebar></app-right-sidebar>
+      </div>
       <div class="col-12 mt-5">
         <app-footer></app-footer>
       </div>

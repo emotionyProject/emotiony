@@ -3,19 +3,22 @@
     <div class="row w-100">
         <div class="col-sm-6 col-lg-3 text-center mt-4">
             <!-- *ngIf="projectService.editTag" -->
+          
             <input type="text"
+                  class="mt-auto"
                   placeholder="ubicacion1"
                   [ngModel]="projectService.editTag ? projectService.editTag.ubicacion1 : ''"
                   name="ubicacion1"
-                  >
-
-                  <input type="text"
+            >     
+            <span class="borderDark"><i class="fas fa-plus"></i></span>
+                  
+                  <!-- <input type="text"
                   ngModel
                   class="mt-1 left50"
                   [ngModel]="projectService.editTag ? projectService.editTag.ubicacion2 : ''"
                   placeholder="ubicacion2"
                   name="ubicacion2"
-                  >
+                  > -->
         
           </div>
           <div class="col-sm-6 col-lg-3 text-center mt-4">
@@ -26,6 +29,8 @@
             placeholder="language"
             name="language"
             >
+
+            <span class="borderDark"><i class="fas fa-plus"></i></span>
         
           </div>
           <div class="col-sm-6 col-lg-3 text-center mt-4">
@@ -84,20 +89,24 @@
           </div>
           <div class="col-sm-6 col-lg-3 text-center mt-4 w-100">
          
-            <input type="text"
+        <input type="text"
                   ngModel
                   placeholder="#hashtag"
                   name="hashtag"
                   [ngModel]="projectService.editTag ? projectService.editTag.hashtag : ''"
                   >
-
-                  <input type="text"
+                  <select name="from" ngModel>
+                    <option [ngValue]="elementFrom" *ngFor="let elementFrom of listFrom">{{elementFrom}}</option>
+                </select>      
+                  <span class="borderDark"><i class="fas fa-plus"></i></span>
+        <!--<input type="text"
                   ngModel
                   class="mt-1"
                   placeholder="from"
                   name="from"
                   [ngModel]="projectService.editTag ? projectService.editTag.from : ''"
-                  >
+                  > -->
+
         
           </div>
     </div>
