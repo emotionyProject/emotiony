@@ -8,3 +8,17 @@
 .mt-10{
     margin-top: 120px;
 }
+
+.width75{
+    width: 75px;
+}
+
+.minwidth{
+    min-width: 900px;
+}
+
+@media (max-width: 900px){
+    .mediaCenter{
+        text-align: center;
+    }
+}

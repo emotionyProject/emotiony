@@ -2,11 +2,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+
 import {
     ModalService,
     UserService,
     EmotioniesService,
-    ProjectsService
+    ProjectsService,
+    RightSidebarService
 } from './service.index';
 
 @NgModule({
@@ -18,7 +20,8 @@ import {
         ModalService,
         UserService,
         EmotioniesService,
-        ProjectsService
+        ProjectsService,
+        RightSidebarService
     ],
     declarations: []
 })

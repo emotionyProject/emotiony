@@ -1,3 +1,20 @@
 .tag{
     font-size: 0.8em;
 }
+
+
+
+@media (max-width: 900px){
+    .top10Add{
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 600px){
+    .top10{
+        margin-top: 10px;
+    }
+    .left50{
+        margin-left: 50px;
+    }
+}
