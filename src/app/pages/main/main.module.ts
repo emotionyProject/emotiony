@@ -11,6 +11,7 @@ import { FooterDownloadComponent } from './shared/footer-download/footer-downloa
 import { LoginComponent } from './modal/login/login.component';
 import { ContactComponent } from './modal/contact/contact.component';
 import { MainComponent } from './main.component';
+import { GameComponent } from './game/game.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { MainComponent } from './main.component';
         FooterDownloadComponent,
         LoginComponent,
         ContactComponent,
-        MainComponent
+        MainComponent,
+        GameComponent
     ],
     imports: [
         CommonModule,
