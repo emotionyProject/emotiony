@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import * as Highcharts from 'highcharts';
 import highchartsMore from 'highcharts/highcharts-more';
 import highchartsFunnel from 'highcharts/modules/funnel';
@@ -18,7 +18,7 @@ highchartsFunnel(Highcharts);
   styleUrls: ['./stacked.component.css']
 })
 export class StackedComponent implements OnInit {
-
+  @Input() titulo: string;
   position: number = 0;
   partida: Partida;
   categories;
@@ -138,7 +138,8 @@ export class StackedComponent implements OnInit {
 
                 this.categories =  this.partida.getCategoriesStacked(positions);
 
-                this.title = this.partida.correo;
+                // this.title = this.partida.correo;
+                this.title = this.titulo;
                 this.subtitle = this.partida.idPartida;
                 this.paintChart();
             }

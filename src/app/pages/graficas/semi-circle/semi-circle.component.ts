@@ -124,7 +124,8 @@ export class SemiCircleComponent implements OnInit {
                 plotShadow: false
             },
             title: {
-                text: this.partida.correo,
+                //text: this.partida.correo,
+                text: 'PERCENTAGE BY emotion',
                 align: 'center',
                 style: {
                     fontSize: '1.2em'

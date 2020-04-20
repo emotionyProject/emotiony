@@ -11,19 +11,19 @@
         <app-filters></app-filters>
       </div>
       <div class="col-5 mt-3">
-        <app-chart></app-chart>
+        <app-chart  [titulo]='"emotions WIND ROSE"'></app-chart>
       </div>
       <div class="col-5 mt-3">
-        <app-chart></app-chart>
+        <app-chart [titulo]='"drivers WIND ROSE"'></app-chart>
       </div>
       <div class="col-1 mt-3">
         <app-barchart></app-barchart>
       </div>
       <div class="col-6 mt-3">
-        <app-stacked></app-stacked>
+        <app-stacked [titulo]='"total EMOTIONS"'></app-stacked>
       </div>
       <div class="col-6 mt-4">
-        <app-stacked></app-stacked>
+        <app-stacked [titulo]='"total DRIVERS"'></app-stacked>
       </div>
       <div class="col-9 mt-4">
         <app-area-basic></app-area-basic>
@@ -41,15 +41,16 @@
         <div class="margin-top20">
         <app-analytics class="col-12 mt-5"></app-analytics>
         </div>
+        <div class="col-12 mt-5">
+          <app-media></app-media>
+        </div>
         <div class="margin-top40">
           <app-semi-circle class="col-12"></app-semi-circle>
         </div>
         <div>
           <app-languages class="col-12"></app-languages>
         </div>
-        <div class="col-12 margin-top60">
-          <app-media></app-media>
-        </div>
+      
       </div>
       <div class="col-12"><app-footer></app-footer></div>
     </div>

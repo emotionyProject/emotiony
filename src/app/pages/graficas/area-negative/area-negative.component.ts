@@ -85,7 +85,8 @@ export class AreaNegativeComponent implements OnInit {
         type: 'area'
       },
       title: {
-        text: this.partida.correo
+        //text: this.partida.correo
+        text:  'complementary EMOTIONS'
       },
       xAxis: {
         categories: ['EMO1/EMO10', 'EMO2/EMO11', 'EMO3/EMO12', 'EMO4/EMO13',

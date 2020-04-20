@@ -115,7 +115,8 @@ export class ParetoComponent implements OnInit {
                 type: 'column'
             },
             title: {
-                text: this.partida.correo
+                // text: this.partida.correo
+                text: 'emotion by PARETO'
             },
             tooltip: {
                 shared: true

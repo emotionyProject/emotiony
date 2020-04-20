@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,  Input } from '@angular/core';
 import * as Highcharts from 'highcharts';
 import highchartsMore from 'highcharts/highcharts-more';
 import highchartsFunnel from 'highcharts/modules/funnel';
@@ -20,6 +20,8 @@ highchartsFunnel(Highcharts);
 
 export class ChartComponent implements OnInit {
 
+
+    @Input() titulo: string;
     position: number = 0;
     partida: Partida;
     categories;
@@ -156,7 +158,8 @@ export class ChartComponent implements OnInit {
                     this.partida.getEmotionName(12), this.partida.getEmotionName(13), this.partida.getEmotionName(14),
                     this.partida.getEmotionName(15), this.partida.getEmotionName(16), this.partida.getEmotionName(17)];
 
-                    this.title = this.partida.correo;
+                    // this.title = this.partida.correo;
+                    this.title = this.titulo;
                     this.subtitle = this.partida.idPartida;
                     this.paintChart();
 
@@ -217,7 +220,8 @@ export class ChartComponent implements OnInit {
                     }
                     ];
 
-                    this.title = this.partida.correo;
+                    // this.title = this.partida.correo;
+                    this.title = this.titulo;
                     this.subtitle = this.partida.idPartida;
                     this.paintChart();
 
@@ -274,7 +278,8 @@ export class ChartComponent implements OnInit {
                     this.partida.getEmotionName(12), this.partida.getEmotionName(13), this.partida.getEmotionName(14),
                     this.partida.getEmotionName(15), this.partida.getEmotionName(16), this.partida.getEmotionName(17)];
 
-                    this.title = this.partida.correo;
+                    // this.title = this.partida.correo;
+                    this.title = this.titulo;
                     this.subtitle = this.partida.idPartida;
 
                     this.paintChart();
