@@ -8,6 +8,8 @@ import { EmotioniesService } from '../../../services/emotionies/emotionies.servi
 import { Partida } from '../../../models/partida.model';
 import { PosValue } from '../../../interface/posValue.interface';
 
+
+
 highchartsMore(Highcharts);
 highchartsFunnel(Highcharts);
 // HighchartsMore(Highcharts);
@@ -80,6 +82,7 @@ export class AreaNegativeComponent implements OnInit {
   }
 
   paintAreaChart() {
+    
     this.chartOptions = {
       chart: {
         type: 'area'
@@ -89,8 +92,9 @@ export class AreaNegativeComponent implements OnInit {
         text:  'complementary EMOTIONS'
       },
       xAxis: {
-        categories: ['EMO1/EMO10', 'EMO2/EMO11', 'EMO3/EMO12', 'EMO4/EMO13',
-          'EMO5/EMO14', 'EMO6/EMO15', 'EMO7/EMO16', 'EMO8/EMO116', 'EMO9/EMO18']
+        categories: [this.partida.getCategoriesAreaNegative(0), this.partida.getCategoriesAreaNegative(1), this.partida.getCategoriesAreaNegative(2), this.partida.getCategoriesAreaNegative(3),
+        this.partida.getCategoriesAreaNegative(4), this.partida.getCategoriesAreaNegative(5), this.partida.getCategoriesAreaNegative(6),
+        this.partida.getCategoriesAreaNegative(7), this.partida.getCategoriesAreaNegative(8)]
       },
       credits: {
         enabled: false

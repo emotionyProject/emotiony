@@ -1,6 +1,7 @@
 import { Emotion } from './emotion.model';
 import { numberFormat } from 'highcharts';
 import { PosValue } from '../interface/posValue.interface';
+import { typeEmotion, typeAllEmotion } from './typeEmotion';
 
 export class Partida {
 
@@ -50,8 +51,9 @@ export class Partida {
         } else if(pos >=14){
             pos = pos - 9;
         }
-        pos++;
-        return 'EMO' + pos.toString();
+        //pos++;
+        //return 'EMO' + pos.toString();
+        return typeEmotion[pos];
 
     }
 
@@ -155,8 +157,9 @@ export class Partida {
     getCategoriesStacked(positions: number[]): string[] {
         let categories = [];
         for( let i of positions){
-            let pos= i +1;
-            categories.push('EMO' + pos);
+            //let pos= i +1;
+            //categories.push('EMO' + pos);
+            categories.push(typeEmotion[i]);
         }
         // console.log(categories);
         return categories;
@@ -217,5 +220,14 @@ export class Partida {
         for(let j= 0; j<emotionValue.length; j++){
             emotionValue[j].value = (emotionValue[j].value / total) * 100;
         }
+    }
+
+    // ===================================== AreaNegative =============================
+    getCategoriesAreaNegative(pos: number): string {
+        let category = '';
+        if (pos >=0 && pos+9<18) {
+            category = typeEmotion[0] +'/' + typeEmotion[pos + 9];
+        }
+        return category;
     }
 }

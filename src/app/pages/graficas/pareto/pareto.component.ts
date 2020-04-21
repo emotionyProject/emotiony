@@ -10,6 +10,7 @@ import { Partida } from '../../../models/partida.model';
 
 import pareto from 'highcharts/modules/pareto';
 import { PosValue } from '../../../interface/posValue.interface';
+import { typeEmotion } from '../../../models/typeEmotion';
 
 
 highchartsMore(Highcharts);
@@ -182,7 +183,8 @@ export class ParetoComponent implements OnInit {
         let pos = 0;
         for (let i = 0; i < posMax; i++) {
             pos = emotionValue[i].pos + 1;
-            categories.push('EMO' + pos);
+            //categories.push('EMO' + pos);
+            categories.push(typeEmotion[pos-1]);
         }
         return categories;
     }

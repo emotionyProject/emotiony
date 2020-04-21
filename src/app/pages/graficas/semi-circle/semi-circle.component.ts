@@ -7,6 +7,8 @@ import highchartsFunnel from 'highcharts/modules/funnel';
 import { EmotioniesService } from '../../../services/emotionies/emotionies.service';
 import { Partida } from '../../../models/partida.model';
 import { PosValue } from '../../../interface/posValue.interface';
+import { typeEmotion } from '../../../models/typeEmotion';
+
 
 highchartsMore(Highcharts);
 highchartsFunnel(Highcharts);
@@ -188,8 +190,9 @@ export class SemiCircleComponent implements OnInit {
     }
 
     getEmo(pos: number) {
-        pos = pos + 1;
-        return 'EMO' + pos;
+        //pos = pos + 1;
+        //return 'EMO' + pos;
+        return typeEmotion[pos];
     }
 
 
